@@ -1,0 +1,17 @@
+{
+  "name": "联星 - 免费影视在线观看",
+  "short_name": "联星",
+  "description": "联星 - 免费观看最新热门影视剧集，海量高清资源在线播放，支持多集连播",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#E50914",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

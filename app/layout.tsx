@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "壳儿 - 免费影视在线观看",
+  title: "联星 - 免费影视在线观看",
   description:
-    "壳儿 - 免费观看最新热门影视剧集，海量高清资源在线播放，支持多集连播",
+    "联星 - 免费观看最新热门影视剧集，海量高清资源在线播放，支持多集连播",
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
@@ -43,6 +44,18 @@ export default function RootLayout({
         <meta name="x5-fullscreen" content="true" />
         <meta name="x5-page-mode" content="app" />
         <meta name="browsermode" content="application" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="theme-color" content="#E50914" />
+
+        <Script id="pwa-register" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+              });
+            }
+          `}
+        </Script>
 
         {/* Google Analytics */}
         <Script
